@@ -10,11 +10,11 @@ json.data do
       :squad,
       :image_url
     )
-      json.skills @characterSkill do |skills|
+      json.skills @character.skills do |skills|
         json.stat skills.stat
       end
-          json.skills @characterPower do |powers|
-            json.stat powers.stat
+          json.powers @character.powers do |powers|
+            json.magic powers.magic
             end
               json.videos @character.videos do |videos|
                 json.title videos.title

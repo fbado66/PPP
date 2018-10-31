@@ -3,22 +3,11 @@ module Api
     class CharactersController < ApplicationController
 
       def index 
-
-        @character = Character.all
-        # @characterSkill = CharacterSkill.all
-        # @characterPower = CharacterPower.all
-        # @characterVideos = CharacterVideo.all
-        render :show, status: :ok
-
-        # character = Character.all 
-
-        # render :show, status: :ok
-
-        # render json: {status: 'SUCCESS', message:'Loaded character', data:character},status: :ok 
-
+        character = Character.all    
+     render json: {status: 'SUCCESS', message:'Loaded character', data:character},status: :ok 
       end
    
-     
+  
 
       def show
         character = Character.all 
@@ -32,10 +21,7 @@ module Api
         # render json: {status: 'SUCCESS', message:'Loaded show character', data:character},status: :ok 
       end 
 
-      # ---no use for it so far---
-      # def edit
-      # end
-
+      
       def create
         @character = Character.new(character_params)
 
