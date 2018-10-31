@@ -3,7 +3,7 @@ module Api
     class CharacterVideosController < ApplicationController
   
       def index
-       @characterVideo = CharacterVideo.all
+       characterVideo = CharacterVideo.all
                 render json: {status: 'SUCCESS', message:'Loaded characters_videos', data:characterVideo},status: :ok
       end
         
