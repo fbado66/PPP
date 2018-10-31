@@ -7,7 +7,7 @@
           @characterPower = CharacterPower.all
           render json: {status: 'SUCCESS', message:'Loaded characters_powers', data:characterPower},status: :ok
         end
-  
+
         def show
           @characterPower = CharacterPower.find(params[:id])
         end

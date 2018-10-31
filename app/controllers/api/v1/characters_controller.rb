@@ -3,13 +3,25 @@ module Api
     class CharactersController < ApplicationController
 
       def index 
-        character = Character.all 
-        render json: {status: 'SUCCESS', message:'Loaded Characters', data:character},status: :ok
+
+        @character = Character.all
+        # @characterSkill = CharacterSkill.all
+        # @characterPower = CharacterPower.all
+        # @characterVideos = CharacterVideo.all
+        render :show, status: :ok
+
+        # character = Character.all 
+
+        # render :show, status: :ok
+
+        # render json: {status: 'SUCCESS', message:'Loaded character', data:character},status: :ok 
+
       end
    
      
 
       def show
+        character = Character.all 
         @character = Character.find(params[:id])
         @character.skills
         @character.videos 

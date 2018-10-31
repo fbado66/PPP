@@ -5,6 +5,8 @@ module Api
         def index 
           character = Character.all 
           skill = Skill.all
+
+          skill = Skill.all
           render json: {status: 'SUCCESS', message:'Loaded skills', data:skill},status: :ok
         end
   

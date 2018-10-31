@@ -1,5 +1,7 @@
+
 json.data do 
   json.character do 
+  
     json.call(
       @character, 
       :name,
@@ -8,14 +10,16 @@ json.data do
       :squad,
       :image_url
     )
-
-      json.skills @character.skills do |skills|
+      json.skills @characterSkill do |skills|
         json.stat skills.stat
       end
-        json.videos @character.videos do |videos|
-          json.title videos.title
-          json.video_url videos.video_url 
-        end
+          json.skills @characterPower do |powers|
+            json.stat powers.stat
+            end
+              json.videos @character.videos do |videos|
+                json.title videos.title
+                json.video_url videos.video_url 
+                end
 
     end
 end
