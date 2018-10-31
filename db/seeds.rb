@@ -490,6 +490,9 @@ Video.create(video_url: 'https://www.youtube.com/embed/ntQgvUHe7Jc?ecver=2', tit
 Video.create(video_url: 'https://www.youtube.com/embed/8FvqjXWJBP8?ecver=2', title: 'The one ive set my heart on')
 
 
+
+
+
 Power.create(magic: 'dark magic')  
 Power.create(magic: 'reinforcement Magic')  
 Power.create(magic: 'restraining Magic')  
