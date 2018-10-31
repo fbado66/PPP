@@ -16,9 +16,11 @@ json.data do
           json.powers @character.powers do |powers|
             json.magic powers.magic
             end
-              json.videos @character.videos do |videos|
+              json.videos_title @character.videos do |videos|
                 json.title videos.title
-                json.video_url videos.video_url 
+                end 
+                json.videos_url @character.videos do |videos|
+                  json.video_url videos.video_url 
                 end
 
     end
