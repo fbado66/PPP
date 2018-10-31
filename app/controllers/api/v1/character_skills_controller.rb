@@ -2,7 +2,7 @@ module Api
   module V1
     class CharacterSkillsController < ApplicationController
       def index
-        @characterSkill = CharacterSkill.all
+        characterSkill = CharacterSkill.all
         render json: {status: 'SUCCESS', message:'Loaded characters_skills', data:characterSkill},status: :ok
       end
 

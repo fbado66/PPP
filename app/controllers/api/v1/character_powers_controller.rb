@@ -4,7 +4,7 @@
     module V1
       class CharacterPowersController < ApplicationController
         def index
-          @characterPower = CharacterPower.all
+          characterPower = CharacterPower.all
           render json: {status: 'SUCCESS', message:'Loaded characters_powers', data:characterPower},status: :ok
         end
 
